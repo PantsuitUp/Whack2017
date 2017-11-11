@@ -1,1 +1,1 @@
-web: gunicorn pantsuitUp.wsgi --log-file -
+web: gunicorn --pythonpath pantsuitUp pantsuitUp.wsgi --log-file -

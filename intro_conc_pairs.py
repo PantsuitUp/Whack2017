@@ -1,0 +1,11 @@
+seq_1 = ("Thank you for coming today. I'm Alexa, and I'll be your interviewer. I've been with Amazon for the past 5 years, and I'm currently a project manager. Today is about getting to know you a little bit better. I'll ask you a few questions to learn more about you and what you've been working on. At the end there will be time for questions and feedback. Does that sound ok?", "Well, that brings us to the end of the interview. Thank you so much for the information you provided! I'll be bringing my notes to my supervisor and emphasize all of the amazing projects you shared with me today. You should be hearing back from us in the next few days - I look forward to seeing you soon!")
+
+seq_2 = ("Ok, let's get started. I'm going to ask you a few questions to see how you'll fit with the team.", " Ok, thanks for your time. We'll let all applicants know by the end of next month. Have a good day.")
+
+seq_3 = ("Thanks for coming. I'm Alexa, and I'll be your interviewer. I majored in computer science and have worked at a few different companies since then. I've been with Amazon for the past few years and I love it. I work on a team of product developers. My team has about 10 members, and we work on getting products ready for market. It's really interesting because I get to work with all branches of the company and see a product from start to finish. This is the team youll be interviewing for - we normally like students to have a large amount of project work and leadership.", "Wow, that was great. I loved speaking with you today. Thank you so much for your interest in the company. I'll pass your resume around to my supervisors. Please apply online, and have a great day!")
+
+seq_4 = ("Hello. Do you have a copy of your resume? It says here you are interested in our company - can you tell me why?", "Ok, that brings us to the end of the interview. Please make sure you have completed the online application. We'll be in touch soon.")
+
+seq_5 = ("Hello, the interview today will be in the STAR format. STAR stands for Situation, Task, Action, and Results. In all answers, please follow this format, focusing specifically on what you contributed.", "Ok, thanks for your time. I'll give you my business card. Please reach out if you have any more questions. It was great speaking with you today.")
+
+seq_list = [seq_1, seq_2, seq_3, seq_4, seq_5]

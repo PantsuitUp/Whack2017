@@ -1,1 +1,2 @@
-textblob.download_corpora
+punkt
+averaged_perceptron_tagger

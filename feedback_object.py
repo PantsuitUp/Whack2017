@@ -14,11 +14,11 @@ class Feedback(object):
 		indicoio.config.api_key = '7b7ddd4e3120df54b1a4018d77e01f9c'
 
 		word_dict, total_words = self.word_freq(text)
-		raw_sentiment = self.sentiment_measure(text)
-		raw_personality = self.personality_measure(text)
-		raw_ownership = self.ownership_measure(word_dict)
-		raw_passivity = self.passive_measure(text)
-		raw_overused_words = self.overused_words(word_dict, total_words)
+		self.raw_sentiment = self.sentiment_measure(text)
+		self.raw_personality = self.personality_measure(text)
+		self.raw_ownership = self.ownership_measure(word_dict)
+		self.raw_passivity = self.passive_measure(text)
+		self.raw_overused_words = self.overused_words(word_dict, total_words)
 
 		self.personality = self.convert_personality(raw_sentiment, raw_personality)
 		self.ownership = self.convert_ownnership(raw_ownership)

@@ -1,1 +1,1 @@
-web: gunicorn pantsuitUp.wsgi
+web: gunicorn pantsuitUp.wsgi --log-file -

@@ -10,6 +10,7 @@ from .models import SpeechRec, Feedback, Interview
 
 def do_interview(request):
 	interview = Interview()
+	interview.generate_interview()
 	sr = SpeechRec()
 	combined_answers = ""
 	
@@ -19,7 +20,7 @@ def do_interview(request):
 	interview.ask_question(interview.question_2)
 	combined_answers += sr.get_microphone_output() + ". "
 	interview.ask_question(interview.question_3)
-	combined_answers += sr.get_microphone_output() + ". "
+	combined_answers += sr.get_microphone_output()
 
 	return feedback(request, combined_answers)
 

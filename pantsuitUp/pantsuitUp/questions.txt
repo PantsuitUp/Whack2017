@@ -1,0 +1,40 @@
+Tell me about a time you had to form a relationship with someone in a difficult situation. (hard, long, Interpersonal Skills)
+Have you handled a difficult situation with a co-worker; if so, how? (medium, medium, Interpersonal Skills)
+What do you do if you disagree with a co-worker? (easy, medium, Interpersonal Skills)
+Talk about a time when you had to work closely with someone whose personality was very different from yours. (hard, medium, Interpersonal Skills)
+Describe a time when you struggled to build a relationship with someone important; how did you eventually overcome that? (hard, medium, Interpersonal Skills)
+Tell me about a time you were able to successfully deal with another person even when that individual may not have personally liked you (or vice versa). (hard, long, Interpersonal Skills)
+Talk about a time when you had to work closely with someone whose personality was very different from yours. (medium, medium, Interpersonal Skills) /
+Have you handled a difficult situation with a supervisor; if so, how? (hard, medium, Interpersonal Skills) /
+Have you handled a difficult situation with another department; if so, how? (hard, medium, Interpersonal Skills) /
+Have you handled a difficult situation with a client or vendor; if so, how? (hard, medium, Interpersonal Skills) /
+What do you do if you disagree with your boss? (medium, medium, Interpersonal Skills) /
+Give me a specific example of a time when you had to conform to a policy with which you did not agree. (hard, medium, Interpersonal Skills) /
+Tell me about a recent situation in which you had to deal with a very upset customer or co-worker. (hard, medium, Interpersonal Skills) /
+We all make mistakes we wish we could take back; tell me about a time you wish you had handled a situation differently with a colleague. (medium, long, Interpersonal Skills) /
+Describe a time when it was especially important to make a good impression on a client; how did you go about doing so? (easy, long, Interpersonal Skills) /
+Give me an example of a time when you did not meet the expectation of a client. What happened, and how did you attempt to rectify the situation? (medium, long, Interpersonal Skills) /
+Describe a time when you had to interact with a difficult client; what was the situation, and how did you handle it? (medium, long, Interpersonal Skills) /
+Give me an example of when you showed initiative and took the lead. (medium, long, Leadership) /
+Tell me about a time when you delegated a project effectively. (medium, long, Leadership) /
+Describe a long-term project that you managed; how did you keep everything moving along in a timely manner? (medium, medium, Leadership) /
+Describe a time when you saw some problem and took the initiative to correct it rather than waiting for someone else to do it. (easy, medium, Leadership) /
+Give me an example of a time when you motivated others. (medium, long, Leadership) /
+What was your biggest frustration in a project recently? (easy, medium, Failure_Frustration) /
+What is your biggest weakness? (hard, medium, Failure_Frustration) /
+Tell me about a time you were dissatisfied in your work; what could have been done to make it better? (hard, long, Failure_Frustration) /
+Tell me about a recent technical challenge you had. (easy, medium, Failure_Frustration) /
+Tell me about a time you failed; how did you deal with this situation? (hard, long, Failure_Frustration) /
+Give me an example of a time when something you tried to accomplish and failed. (hard, long, Failure_Frustration) /
+What is your typical way of dealing with conflict -- give me an example. (easy, medium, Failure_Frustration) /
+When you worked on multiple projects how did you prioritize? (medium, medium, Time Management_Prioritization) /
+Tell me about a time you had to be very strategic in order to meet all your top priorities. (hard, medium, Time Management_Prioritization) /
+Tell me about a time when you had too many things to do and you were required to prioritize your tasks. (medium, long, Time Management_Prioritization) /
+How did you handle meeting a tight deadline? (medium, medium, Time Management_Prioritization) /
+What do you do when your schedule is interrupted -- give an example of how you handle it. (hard, long, Time Management_Prioritization) /
+Tell me about the last time your workday ended before you were able to get everything done. (hard, long, Time Management_Prioritization) /
+Suppose you are working on a project with an original scope of a few months and you are told that you instead now have a few days -- how would you handle it? (hard, medium, Time Management_Prioritization) /
+When you are working with a large number of customers, it is tricky to deliver excellent service to them all; how do you go about prioritizing the needs of your customers? (hard, medium, Time Management_Prioritization) /
+Sometimes it is just not possible to get everything on your to-do list done; tell me about a time your responsibilities got a little overwhelming -- what did you do? (medium, long, Time Management_Prioritization) /
+Give me an example of a time you managed numerous responsibilities; how did you handle that? (medium, long, Time Management_Prioritization) /
+Describe a time when you anticipated potential problems and developed preventive measures. (hard, long, Time Management_Prioritization) /

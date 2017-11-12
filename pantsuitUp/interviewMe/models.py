@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
+import pyttsx
+import speech_recognition as sr
 import string
 import nltk
 import indicoio
@@ -11,6 +13,70 @@ import time
 import re
 
 # Create your models here.
+
+@python_2_unicode_compatible
+class Interview(models.Model):
+	intro = models.CharField(max_length = 100000, default = "Hello and welcome. Let's get started. ")
+	conclusion = models.CharField(max_length = 100000, default = "Goodbye")
+	question_1 = models.CharField(max_length = 100000, default = "What's your greatest weakness?")
+	question_2 = models.CharField(max_length = 100000, default = "Describe a team you showed leadership.")
+	question_3 = models.CharField(max_length = 100000, default = "What's your work-style?")
+
+	def __str__(self):
+		return self.output_text
+
+	def generate_interview(self):
+		pass
+
+	def say_something(self, text):
+		engine = pyttsx.init()
+		engine.say(text)
+		engine.runAndWait()
+
+	def say_intro(self):
+		self.say_something(self.intro)
+
+	def say_conclusion(self):
+		self.say_something(self.conclusion)
+
+	def ask_question(self, question):
+		self.say_something(question)
+
+
+@python_2_unicode_compatible
+class SpeechRec(models.Model):
+	output_text = models.CharField(max_length = 100000, default = "")
+
+	def __str__(self):
+		return self.output_text
+
+	def get_microphone_output(self):
+		'''
+		Runs a speech recognition library and returns a string of user's phrase after an user stops talking
+		'''
+		r = sr.Recognizer()
+		sr.dynamic_energy_threshold = False
+		sr.energy_threshold = 500
+		tries = 3
+		answer = ""
+
+		with sr.Microphone() as source:
+		    while True:
+		        r.adjust_for_ambient_noise(source)
+		        audio = r.listen(source)
+		        try:
+		            snippet = r.recognize_google(audio)
+		            answer += " " + snippet
+		            print answer
+		            if "answer" in snippet:
+		                return answer
+		        except sr.UnknownValueError:
+		            if tries == 0:
+		                return "Google doesn't understand audio"
+		            tries -= 1
+		        except sr.RequestError as e:
+		            return e
+
 
 @python_2_unicode_compatible
 class Feedback(models.Model):

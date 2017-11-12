@@ -16,11 +16,11 @@
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="../../index.html" class="w3-bar-item w3-button">home</a>
+    <a href=".." class="w3-bar-item w3-button">home</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small">about</a>
-    <a href="features.html" class="w3-bar-item w3-button w3-hide-small">features</a>
-    <a href="demo.html" class="w3-bar-item w3-button w3-hide-small">demo</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    <a href="../features" class="w3-bar-item w3-button w3-hide-small">features</a>
+    <a href="../demo" class="w3-bar-item w3-button w3-hide-small">demo</a>
+    <a href="../login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       login
     </a>
   </div>
@@ -28,9 +28,9 @@
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">about</a>
-    <a href="features.html" class="w3-bar-item w3-button" onclick="toggleFunction()">features</a>
-    <a href="demo.html" class="w3-bar-item w3-button" onclick="toggleFunction()">demo</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    <a href="../features" class="w3-bar-item w3-button" onclick="toggleFunction()">features</a>
+    <a href="../demo" class="w3-bar-item w3-button" onclick="toggleFunction()">demo</a>
+    <a href="../login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       login
     </a>
   </div>
@@ -50,33 +50,33 @@
   <div class="w3-row">
 
     <h4>OVERALL STATS</h4>
-    <p class="w3-wide">active voice</p>
+    <p class="w3-wide">passive voice</p>
     <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:75%">75%</div>
+      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:{{passivity_score}}%">{{passivity_score}}</div>
     </div>
     <p class="w3-wide">positivity</p>
     <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:90%">90%</div>
+      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:{{positivity_score}}%">{{positivity_score}}</div>
     </div>
     <p class="w3-wide">agreeableness</p>
     <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:75%">75%</div>
+      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:{{agreeableness_score}}%">{{agreeableness_score}}</div>
     </div>
     <p class="w3-wide">openness</p>
     <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:45%">45%</div>
+      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:{{openness_score}}%">{{openness_score}}</div>
     </div>
     <p class="w3-wide">conscienciousness</p>
     <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:85%">85%</div>
+      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:{{conscienciousness_score}}%">{{conscienciousness_score}}</div>
     </div>
     <p class="w3-wide">ownership</p>
     <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:60%">60%</div>
+      <div class="w3-container w3-padding-small w3-blue-grey w3-center" style="width:{{ownership_score}}%">{{ownership_score}}</div>
     </div>
   </br></br></br>
   <h4>GENERAL FEEDBACK</h4>
-  <p class="w3-left"> here's what Sierra had to say: </br></br></p>
+  <p class="w3-left"> {{feedback_text}} </p>
   </div>
 </div>
 
@@ -89,7 +89,36 @@
 </footer>
 
 <!-- Scripts -->
-<script src="../main.js"></script>
+<script> 
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}</script>
 
 </body>
 </html>

@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>WHACK - 2017</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'interviewMe/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'interviewMe/w3.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href=".." class="w3-bar-item w3-button">home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small">about</a>
+    <a href="../features" class="w3-bar-item w3-button w3-hide-small">features</a>
+    <a href="../demo" class="w3-bar-item w3-button w3-hide-small">demo</a>
+    <a href="../login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      login
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">about</a>
+    <a href="../features" class="w3-bar-item w3-button" onclick="toggleFunction()">features</a>
+    <a href="../demo" class="w3-bar-item w3-button" onclick="toggleFunction()">demo</a>
+    <a href="../login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      login
+    </a>
+  </div>
+</div>
+
+<!-- Header -->
+<div class="bgimg-blue w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">ABOUT</span>
+  </div>
+</div>
+
+<!-- About Product-->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">about (pant)suit up</h3>
+  <p class="w3-center"><em>the alexa skill that will get you jobs.</em></p>
+  <p>We rely on Alexa for basic needs: to play music, to call people, to tell us the weather -- but what if Alexa could do more? More specifically, what if Alexa could help us prepare for the adult world; what if she
+      could help us get employed?</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+    </br></br>
+      <img src="../images/alexa.jpg" class="w3-round w3-image" alt="alexa" width="1000" height="1000">
+      <p><b>hey, Alexa</b></p><br>
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Here's where (pant)suit up comes in: (pant)suit up is an Alexa skill that helps prepare any college-educated job hunters for any professional interview. Just say "Alexa, start my interview," and she will throw
+         you the most commonly asked interview questions, varying in difficulty, category, and length. She gives you an opportunity to practice and rehearse your answers, and when you've finished the mock interview,
+         Alexa will analyze what you've said and give you feedback on how it can be better. (pant)suit up is the best interview prep out there, and she will get you jobs. </p>
+    </div>
+  </div>
+
+<!--Business Plan -->
+  <div class="w3-center">
+  <iframe src="../images/businessplan.pdf"
+  style="width:600px; height:800px" frameborder="0"></iframe>
+</div>
+</div>
+
+<!-- Metrics -->
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Projects Done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Meetings
+  </div>
+</div>
+
+<!-- About Team -->
+<div class="w3-content w3-container w3-padding-64" id="team">
+  <h3 class="w3-center">about the team</h3>
+  <p class="w3-center"><em>four fierce women from Olin College of Engineering.</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m3 w3-container">
+      <img src="../images/uma.jpg"></img>
+      <p class="w3-centered">UMA DESAI</p>
+      <p>oomador</p>
+    </div>
+    <div class="w3-col m3 w3-container">
+      <img src="../images/uma.jpg"></img>
+      <p class="w3-centered">MARY KEENAN</p>
+      <p>MK-47</p>
+    </div>
+    <div class="w3-col m3 w3-container">
+      <img src="../images/uma.jpg"></img>
+      <p class="w3-centered">GWYNETH PHELPS</p>
+      <p>g-money</p>
+    </div>
+    <div class="w3-col m3 w3-container">
+      <img src="../images/uma.jpg"></img>
+      <p class="w3-centered">RACHEL YANG</p>
+      <p>yangerz-bangerz</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-xlarge w3-section">
+    <a href="https://github.com/RachelYang02/whack2017"><i class="fa fa-github w3-hover-opacity"></i></a>
+  </div>
+  <p>Hacked @ WHACK 2017 by students </br> of Franklin W. Olin College of Engineering</p>
+</footer>
+
+<!-- Scripts -->
+<script> 
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}</script>
+</body>
+</html>

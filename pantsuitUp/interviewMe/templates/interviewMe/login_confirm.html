@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'interviewMe/main.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'interviewMe/w3.css' %}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflasre.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'interviewMe/font-awesome-4.7.0/css/font-awesome.min.css' %}">
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -20,8 +20,8 @@
     <a href="../about" class="w3-bar-item w3-button w3-hide-small">about</a>
     <a href="../features" class="w3-bar-item w3-button w3-hide-small">features</a>
     <a href="../demo" class="w3-bar-item w3-button w3-hide-small">demo</a>
-    <a href="../login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      login
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      log out
     </a>
   </div>
 
@@ -30,34 +30,26 @@
     <a href="../about" class="w3-bar-item w3-button" onclick="toggleFunction()">about</a>
     <a href="../features" class="w3-bar-item w3-button" onclick="toggleFunction()">features</a>
     <a href="../demo" class="w3-bar-item w3-button" onclick="toggleFunction()">demo</a>
-    <a href="../login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       login
     </a>
-  </div
+  </div>
+</div>
 
 <!-- Header -->
 <div class="bgimg-blue w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">INTERVIEW</br></span>
+     <span class="w3-xxlarge w3-text-white w3-wide">LOGIN</span>
   </div>
 </div>
+</br></br></br>
 
+<!-- Confirm Login -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <p class="w3-center">Hit the Begin button to start the interview. You will be asked and answer three questions, one at a time. At the end of each answer, say "end of answer" so it knows you have finished. When you are done interviewing, you will be given a summary of your performance. Good luck!</p>
-
-  <div class="w3-row w3-center w3-padding-8 w3-section">
-    <div class="w3-col m1 w3-panel">
-    </div>
-    <div class="w3-col m10 w3-panel">
-      <form action="/action_page.php" target="_blank">
-      </br>
-      <a href= ../do_interview class="w3-bar w3-black w3-button w3-hide-small w3-hover-dark-grey"> BEGIN
-        </a>
-      </form>
-    </br></br></br></br></br>
-    </div>
-  </div>
+</br></br></br></br></br>
+  <h4 class="w3-center"><em>great, thanks! </br> you are signed in.</em></h4>
 </div>
+</br></br></br></br></br></br></br>
 
 <!-- Footer -->
 <footer class="w3-center w3-dark-grey w3-padding-64">
@@ -66,19 +58,9 @@
   </div>
   <p>Hacked @ WHACK 2017 by students </br> of Franklin W. Olin College of Engineering</p>
 </footer>
-</body>
-</html>
-<!-- Add Google Maps -->
-<script> 
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
+<!-- Script -->
+<script>
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -99,3 +81,5 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }</script>
+</body>
+</html>

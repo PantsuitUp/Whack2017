@@ -24,16 +24,6 @@ def do_interview(request):
 
 	return feedback(request, combined_answers)
 
-
-def submit_info(request):
-	if request.method == 'POST':
-		form = request.POST
-	else:
-		form = request.GET
-	return interview(request, form)
-
-
-
 # this view + template exists solely for start-up on heroku (to add interviewMe/ prefix)
 def start(request):
 	return render(request, 'interviewMe/start.html', {})
@@ -61,6 +51,9 @@ def demo(request):
 
 def login(request):
 	return render(request, 'interviewMe/login.html', {})
+
+def login_confirm(request):
+	return render(request, 'interviewMe/login_confirm.html', {})
 
 def feedback(request, input_text = "I love dogs"):
 	feedback = Feedback()

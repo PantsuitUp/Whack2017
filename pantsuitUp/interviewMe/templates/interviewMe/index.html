@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'interviewMe/main.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'interviewMe/w3.css' %}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflasre.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'interviewMe/font-awesome-4.7.0/css/font-awesome.min.css' %}">
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -36,29 +36,27 @@
   </div>
 </div>
 
-<!-- First Parallax Image with Logo Text -->
+<!-- Landing -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xxlarge w3-wide w3-animate-opacity"><span class = "w3-hide-small" style="font-size:40px">(pant)suit up</span></span> </br>
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class = "w3-hide-small" style="font-size:25px">an alexa skill</span></span></br>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class = "w3-hide-small" style="font-size:25px">the go-to interview prep tool</span></span></br>
   </div>
   <div class="w3-display-bottomleft w3-padding-left">
       <i class="w3-center fa fa-arrow-down fa-fw"></i><span class="w3-center w3-centered w3-animate-opacity"><span class = "w3-hide-small" style="font-size: 25px">      learn more below</span></span></br>
-
   </div>
 </div>
 
+<!-- Spacer -->
 <div class="w3-row w3-center w3-dark-grey w3-padding-64">
 </br></br></br></br></br>
 </div>
 
-<!-- Container (Portfolio Section) -->
+<!-- Site Map -->
 <div class="w3-content w3-container w3-padding-64" id="demo">
   <h3 class="w3-center">explore our site</h3>
-  <!-- <p class="w3-center"><em>here are some <br> Click on the images to make them bigger</em></p><br> -->
-
-    <div class="w3-row w3-padding-32 w3-section">
-      <div class="w3-col w3-container w3-blue-grey" style="width:260px">
+    <div class="w3-row w3-padding-32 w3-section w3-padding-left">
+      <div class="w3-col m3 w3-container w3-blue-grey">
         <p class="w3-center">LEARN MORE</br><em>about the what</em></p>
         <a href="features" class="w3-bar w3-black w3-button w3-hide-small w3-hover-dark-grey">
           FEATURES
@@ -67,7 +65,7 @@
       </div>
       <div class="w3-col m1 w3-container">
       </div>
-      <div class="w3-col w3-container w3-blue-grey" style="width:260px">
+      <div class="w3-col m3 w3-container w3-blue-grey">
         <p class="w3-center">TRY OUT</br><em>the how</em></p>
         <a href="demo" class="w3-bar w3-black w3-button w3-hide-small w3-hover-dark-grey">
           DEMO
@@ -76,36 +74,28 @@
       </div>
       <div class="w3-col m1 w3-container">
       </div>
-      <div class="w3-col w3-container w3-blue-grey" style="width:260px">
-        <p class="w3-center">LEARN MORE</br><em>about the who and why</em></p>
+      <div class="w3-col m3 w3-container w3-blue-grey">
+        <p class="w3-center">MEET US</br><em>the who</em></p>
         <a href="about" class="w3-bar w3-black w3-button w3-hide-small w3-hover-dark-grey">
           ABOUT
         </a>
       </br></br>
       </div>
     </div>
-  </div>
+</div>
 
 <!-- Footer -->
 <footer class="w3-center w3-dark-grey w3-padding-64">
   <div class="w3-xlarge w3-section">
-    <a href="https://github.com/RachelYang02/whack2017"><i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href="https://github.com/PantsuitUp/Whack2017"><i class="fa fa-github w3-hover-opacity"></i></a>
   </div>
   <p>Hacked @ WHACK 2017 by students </br> of Franklin W. Olin College of Engineering</p>
 </footer>
 </body>
 </html>
-<!-- Add Google Maps -->
-<script> 
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
+<!-- Script -->
+<script>
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -126,4 +116,3 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }</script>
-

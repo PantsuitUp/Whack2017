@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'interviewMe/main.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'interviewMe/w3.css' %}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'interviewMe/font-awesome-4.7.0/css/font-awesome.min.css' %}">
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -51,7 +51,7 @@
     <div class="w3-col m4 w3-panel">
     </div>
     <div class="w3-col m8 w3-panel">
-      <form action="/action_page.php" target="_blank">
+      <form action="../login_confirm" method="post">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="email" required name="Password">
@@ -61,9 +61,7 @@
             <input class="w3-input w3-border" type="text" placeholder="password" required name="password">
           </div>
         </div>
-        <button class="w3-button w3-black w3-section w3-center" type="submit">
-          <i class="fa fa-paper-plane"></i> SIGN IN
-        </button>
+        <a href= ../login_confirm method="post" class="w3-button w3-black w3-section w3-center" type="submit"> SIGN IN
       </form>
     </div>
   </div>
@@ -73,22 +71,13 @@
 <!-- Footer -->
 <footer class="w3-center w3-dark-grey w3-padding-64">
   <div class="w3-xlarge w3-section">
-    <a href="https://github.com/RachelYang02/whack2017"><i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href="https://github.com/PantsuitUp/Whack2017"><i class="fa fa-github w3-hover-opacity"></i></a>
   </div>
   <p>Hacked @ WHACK 2017 by students </br> of Franklin W. Olin College of Engineering</p>
 </footer>
 
-<!-- Scripts -->
-<script> 
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
+<!-- Script -->
+<script>
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {

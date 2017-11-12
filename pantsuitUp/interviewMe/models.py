@@ -353,7 +353,9 @@ class Feedback(models.Model):
 		if "our" in word_dict:
 			second_person += word_dict["our"]
 
-		return (float(first_person) / (second_person + first_person))
+		if (second_person + first_person != 0):
+			return (float(first_person) / (second_person + first_person))
+		return .5
 
 	def passive_measure(self, text):
 		"""
@@ -369,7 +371,9 @@ class Feedback(models.Model):
 					if (passage_word_sent[i+1][-3:] == 'ing') or (passage_word_sent[i+1][-2:] == 'en') or (passage_word_sent[i+1][-2:] == 'ed'):
 						passive_voice['passive'] += 1
 
-		return passive_voice['passive'] / float(len(passage_sent))
+		if len(passage_sent) > 0:
+			return passive_voice['passive'] / float(len(passage_sent))
+		return .5
 
 	def overused_words(self, word_dict, total_words):
 		""" 
@@ -383,7 +387,7 @@ class Feedback(models.Model):
 			threshold = .05
 		
 		for word, count in word_dict.iteritems():
-			if (count / float(total_words)) > threshold: 
+			if total_words > 0 and (count / float(total_words)) > threshold: 
 				overused_words_list.append(word)
 
 		return overused_words_list

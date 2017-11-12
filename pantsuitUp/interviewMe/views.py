@@ -35,12 +35,11 @@ def home(request):
 def about(request):
 	return render(request, 'interviewMe/about.html', {})
 
-def interview(request, name = "Rachel"):
+def interview(request):
 	interview = Interview()
 	speech_rec_obj = SpeechRec()
 	context = {"interview": interview,
-			   "speech_rec_obj": speech_rec_obj,
-			   "name": name
+			   "speech_rec_obj": speech_rec_obj
 			   }
 	return render(request, 'interviewMe/interview.html', context)
 
@@ -56,7 +55,7 @@ def login(request):
 def login_confirm(request):
 	return render(request, 'interviewMe/login_confirm.html', {})
 
-def feedback(request, input_text = "I love dogs"):
+def feedback(request, input_text):
 	feedback = Feedback()
 	feedback.input_text = input_text
 	feedback.process_text()

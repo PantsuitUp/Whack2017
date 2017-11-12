@@ -123,11 +123,6 @@ class Interview(models.Model):
 	def say_something(self, text):
 		engine = pyttsx.init()
 		engine.setProperty("",120)
-		for voice in voices: #3
-		   engine.setProperty('voice', voice.id)
-		   engine.say('The quick brown fox jumped over the lazy dog.')
-		engine.runAndWait()
-
 		engine.say(text)
 		engine.runAndWait()
 

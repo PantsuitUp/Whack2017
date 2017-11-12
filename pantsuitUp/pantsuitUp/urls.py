@@ -19,7 +19,9 @@ from django.contrib import admin
 from interviewMe import views
 
 urlpatterns = [
-    url(r'^$', include('interviewMe.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^interviewMe/', include('interviewMe.urls')),
+    url(r'^$', views.home),
+
 ]
+	

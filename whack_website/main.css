@@ -7,7 +7,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,26 +16,16 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('../whack_website/images/team.jpg');
+    background-image: url('../whack_website/images/bg.jpg');
     min-height: 100%;
 }
 
-/* Second image (Portfolio) */
-.bgimg-2 {
-    background-image: url("../whack_website/images/team.jpg");
-    min-height: 600px;
+/* Blue Page Header */
+.bgimg-blue {
+    background-color: #7BA2BA;
+    min-height: 200px;
 }
 
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("../whack_website/images/team.jpg");
-    min-height: 600px;
-}
-
-img {
-  height: 50px;
-  width: 50px;
-}
 
 .w3-display-container .w3-display-middle {
   font-size: 50px;

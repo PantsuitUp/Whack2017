@@ -51,7 +51,7 @@
     <div class="w3-col m4 w3-panel">
     </div>
     <div class="w3-col m8 w3-panel">
-      <form action="/action_page.php" target="_blank">
+      <form action="../login_confirm" method="post">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="email" required name="Password">
@@ -78,17 +78,8 @@
   <p>Hacked @ WHACK 2017 by students </br> of Franklin W. Olin College of Engineering</p>
 </footer>
 
-<!-- Scripts -->
-<script> 
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
+<!-- Script -->
+<script>
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {

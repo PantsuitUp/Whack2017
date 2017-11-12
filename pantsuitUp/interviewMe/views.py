@@ -52,6 +52,9 @@ def demo(request):
 def login(request):
 	return render(request, 'interviewMe/login.html', {})
 
+def login_confirm(request):
+	return render(request, 'interviewMe/login_confirm.html', {})
+
 def feedback(request, input_text = "I love dogs"):
 	feedback = Feedback()
 	feedback.input_text = input_text

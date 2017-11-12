@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>WHACK - 2017</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'interviewMe/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'interviewMe/w3.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflasre.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="interviewMe/#" class="w3-bar-item w3-button">home</a>
+    <a href="interviewMe/about" class="w3-bar-item w3-button w3-hide-small">about</a>
+    <a href="interviewMe/features" class="w3-bar-item w3-button w3-hide-small">features</a>
+    <a href="interviewMe/demo" class="w3-bar-item w3-button w3-hide-small">demo</a>
+    <a href="interviewMe/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      login
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="interviewMe/about" class="w3-bar-item w3-button" onclick="toggleFunction()">about</a>
+    <a href="interviewMe/features" class="w3-bar-item w3-button" onclick="toggleFunction()">features</a>
+    <a href="interviewMe/demo" class="w3-bar-item w3-button" onclick="toggleFunction()">demo</a>
+    <a href="interviewMe/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      login
+    </a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xxlarge w3-wide w3-animate-opacity"><span class = "w3-hide-small" style="font-size:40px">(pant)suit up</span></span> </br>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class = "w3-hide-small" style="font-size:25px">an alexa skill</span></span></br>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-left">
+      <i class="w3-center fa fa-arrow-down fa-fw"></i><span class="w3-center w3-centered w3-animate-opacity"><span class = "w3-hide-small" style="font-size: 25px">      learn more below</span></span></br>
+
+  </div>
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-64">
+</br></br></br></br></br>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="demo">
+  <h3 class="w3-center">explore our site</h3>
+  <!-- <p class="w3-center"><em>here are some <br> Click on the images to make them bigger</em></p><br> -->
+
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col w3-container w3-blue-grey" style="width:260px">
+        <p class="w3-center">LEARN MORE</br><em>about the what</em></p>
+        <a href="features" class="w3-bar w3-black w3-button w3-hide-small w3-hover-dark-grey">
+          FEATURES
+        </a>
+      </br></br>
+      </div>
+      <div class="w3-col m1 w3-container">
+      </div>
+      <div class="w3-col w3-container w3-blue-grey" style="width:260px">
+        <p class="w3-center">TRY OUT</br><em>the how</em></p>
+        <a href="demo" class="w3-bar w3-black w3-button w3-hide-small w3-hover-dark-grey">
+          DEMO
+        </a>
+      </br></br>
+      </div>
+      <div class="w3-col m1 w3-container">
+      </div>
+      <div class="w3-col w3-container w3-blue-grey" style="width:260px">
+        <p class="w3-center">LEARN MORE</br><em>about the who and why</em></p>
+        <a href="about" class="w3-bar w3-black w3-button w3-hide-small w3-hover-dark-grey">
+          ABOUT
+        </a>
+      </br></br>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-xlarge w3-section">
+    <a href="https://github.com/RachelYang02/whack2017"><i class="fa fa-github w3-hover-opacity"></i></a>
+  </div>
+  <p>Hacked @ WHACK 2017 by students </br> of Franklin W. Olin College of Engineering</p>
+</footer>
+</body>
+</html>
+<!-- Add Google Maps -->
+<script> 
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}</script>
+

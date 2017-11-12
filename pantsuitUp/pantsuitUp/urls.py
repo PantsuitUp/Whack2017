@@ -21,7 +21,7 @@ from interviewMe import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^interviewMe/', include('interviewMe.urls')),
-    url(r'^$', views.home),
+    url(r'^$', views.start),
 
 ]
 	

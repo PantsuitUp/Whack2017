@@ -9,6 +9,10 @@ from .models import Feedback
 
 # Create your views here.
 
+# this view + template exists solely for start-up on heroku (to add interviewMe/ prefix)
+def start(request):
+	return render(request, 'interviewMe/start.html', {})
+
 def home(request):
 	return render(request, 'interviewMe/index.html', {})
 

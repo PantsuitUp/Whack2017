@@ -21,6 +21,7 @@ def do_interview(request):
 	combined_answers += sr.get_microphone_output() + ". "
 	interview.ask_question(interview.question_3)
 	combined_answers += sr.get_microphone_output()
+	interview.say_conclusion()
 
 	return feedback(request, combined_answers)
 

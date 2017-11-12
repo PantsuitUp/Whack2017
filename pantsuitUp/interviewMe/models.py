@@ -122,7 +122,8 @@ class Interview(models.Model):
 
 	def say_something(self, text):
 		engine = pyttsx.init()
-		engine.setProperty("",120)
+		engine.setProperty("rate",150)
+		engine.setProperty("voice", 2)
 		engine.say(text)
 		engine.runAndWait()
 
